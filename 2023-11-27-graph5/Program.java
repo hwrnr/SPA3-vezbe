@@ -146,6 +146,7 @@ class MST {
       visited[vertex] = true;
       visited[mustHaveEdge.getOther(vertex)] = true;
       startingVertex = vertex;
+      moguceGrane.addAll(g.getNeighborhood(mustHaveEdge.getOther(vertex)));
     }
 
     moguceGrane.addAll(g.getNeighborhood(startingVertex));
@@ -177,9 +178,13 @@ class MST {
 
     System.out.println(edges);
 
+    double suma = 0.0;
     for (Edge edge : edges) {
       this.g.addEdge(edge);
+      suma += edge.getWeight();
     }
+
+    // System.out.println("Težina: " + suma);
 
   }
 
@@ -207,8 +212,8 @@ public class Program {
 
     Edge mustHaveEdge = null;
 
-    for (Edge edge : graph.getNeighborhood(9)) {
-      if (edge.getOther(9) == 3) {
+    for (Edge edge : graph.getNeighborhood(3)) {
+      if (edge.getOther(3) == 4) {
         mustHaveEdge = edge; // Mrzi me da implementiram equals, nek ga poredi po referenci
         break;
       }
