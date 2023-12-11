@@ -162,7 +162,7 @@ class Parnost {
 
     // Cvorovi cije smo grane smo vec ubacili
     // visited[i * g.getNumberOfVertices() + j] je grana iz i u j
-    // Morala se održati mala složenost provere :), a da radi sa grafovima koji sadrže ciklus
+    // Morala se održati mala složenost provere :), a da radi sa grafovima koji sadrže ciklus. Mada neće raditi za grafove koji imaju multigrane
     this.visited = new boolean[g.getNumberOfVertices() * g.getNumberOfVertices()];
 
     for (int i = 0; i < g.getNumberOfVertices(); ++i) {
