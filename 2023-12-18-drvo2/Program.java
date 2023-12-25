@@ -27,7 +27,7 @@ class Trie {
 
   public Trie() {
     root = new Node();
-    najcesciKljucevi = new HashSet();
+    najcesciKljucevi = new HashSet<String>();
     najcesciCounter = 0;
   }
 
