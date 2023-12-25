@@ -260,6 +260,8 @@ class MeniProgram {
       for (char slovo : currentNode.nodes.keySet()) {
         System.out.println("(" + slovo + ") " + currentNode.nodes.get(slovo).description);
       }
+      System.out.println("(,) Nazad" );
+      System.out.println("(.) Napusti meni" );
 
       char novoSlovo = scanner.nextLine().charAt(0);
       if (novoSlovo == '.') break;
